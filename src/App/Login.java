@@ -43,25 +43,41 @@ public class Login extends javax.swing.JFrame {
         lblAccountType = new javax.swing.JLabel();
         cmbUserType = new javax.swing.JComboBox<>();
         cbShowPass = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Book Management System");
         setMinimumSize(new java.awt.Dimension(640, 480));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblLogin.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblLogin.setText("Login");
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(589, 39, -1, -1));
 
+        lblUserName.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblUserName.setText("Enter User Name: ");
+        getContentPane().add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 222, -1, -1));
 
+        lblPassword.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblPassword.setText("Enter Password: ");
+        getContentPane().add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 284, 227, -1));
 
+        txtUserName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 224, 243, -1));
+
+        pwdPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(pwdPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 286, 243, -1));
+
+        btnLogin.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 386, -1, -1));
 
+        lblRegister.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblRegister.setText("New user? Register here");
         lblRegister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -71,77 +87,28 @@ public class Login extends javax.swing.JFrame {
                 lblRegisterMouseEntered(evt);
             }
         });
+        getContentPane().add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 441, -1, -1));
 
+        lblAccountType.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblAccountType.setText("Account Type:");
+        getContentPane().add(lblAccountType, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 166, 227, -1));
 
+        cmbUserType.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cmbUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Select>", "Customer", "Librarian" }));
         cmbUserType.setToolTipText("Select the type of user");
+        getContentPane().add(cmbUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 168, 180, -1));
 
+        cbShowPass.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         cbShowPass.setText("Show Password");
         cbShowPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbShowPassActionPerformed(evt);
             }
         });
+        getContentPane().add(cbShowPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 335, 205, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogin)
-                            .addComponent(lblLogin)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblAccountType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUserName)
-                            .addComponent(pwdPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                            .addComponent(cmbUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(159, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(238, 238, 238))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cbShowPass, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(90, 90, 90))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(lblLogin)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAccountType)
-                    .addComponent(cmbUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUserName))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pwdPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPassword))
-                .addGap(18, 18, 18)
-                .addComponent(cbShowPass)
-                .addGap(9, 9, 9)
-                .addComponent(btnLogin)
-                .addGap(26, 26, 26)
-                .addComponent(lblRegister)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\Downloads\\—Pngtree—library cartoon banner illustration_1065759.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1280, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -246,6 +213,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JCheckBox cbShowPass;
     private javax.swing.JComboBox<String> cmbUserType;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAccountType;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblPassword;

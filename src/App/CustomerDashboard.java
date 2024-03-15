@@ -84,19 +84,23 @@ public class CustomerDashboard extends javax.swing.JFrame {
         lblFine = new javax.swing.JLabel();
         txtFine = new javax.swing.JTextField();
         btnReturn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard");
+        setBackground(new java.awt.Color(255, 51, 51));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
         lblWelcome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        btnLogout.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +108,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
             }
         });
 
+        btnEditProfile.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnEditProfile.setText("Edit Profile");
         btnEditProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +116,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
             }
         });
 
+        btnChangePass.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnChangePass.setText("Change Password");
         btnChangePass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,11 +131,11 @@ public class CustomerDashboard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 291, Short.MAX_VALUE)
                 .addComponent(btnChangePass)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addComponent(btnEditProfile)
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addComponent(btnLogout)
                 .addGap(27, 27, 27))
         );
@@ -140,7 +146,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
                 .addComponent(lblWelcome)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogout)
                     .addComponent(btnEditProfile)
@@ -148,8 +154,11 @@ public class CustomerDashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        lblBorrowedBooks.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 25, -1, -1));
+
+        lblBorrowedBooks.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblBorrowedBooks.setText("Borrowed Books");
+        getContentPane().add(lblBorrowedBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 94, 455, -1));
 
         tblBorrowedBooks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,82 +191,47 @@ public class CustomerDashboard extends javax.swing.JFrame {
             tblBorrowedBooks.getColumnModel().getColumn(3).setResizable(false);
         }
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 197, -1, 249));
+
+        btnBorrow.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnBorrow.setText("Borrow Book");
         btnBorrow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrowActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBorrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 609, -1, -1));
 
+        btnPayFine.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnPayFine.setText("Pay Fine");
         btnPayFine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPayFineActionPerformed(evt);
             }
         });
+        getContentPane().add(btnPayFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 618, -1, -1));
 
-        lblFine.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFine.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblFine.setText("Fine Incurred: ");
+        getContentPane().add(lblFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 520, -1, -1));
 
         txtFine.setEditable(false);
+        txtFine.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         txtFine.setText("Rs. 0");
+        getContentPane().add(txtFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 514, 105, -1));
 
+        btnReturn.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnReturn.setText("Return Book");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
             }
         });
+        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 609, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBorrowedBooks, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblFine, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(btnBorrow)
-                .addGap(63, 63, 63)
-                .addComponent(btnReturn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPayFine)
-                .addGap(120, 120, 120))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addComponent(lblBorrowedBooks)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFine)
-                    .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBorrow)
-                    .addComponent(btnPayFine)
-                    .addComponent(btnReturn))
-                .addGap(76, 76, 76))
-        );
+        jLabel1.setBackground(new java.awt.Color(0, 0, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\OneDrive\\Pictures\\res 1.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 710));
 
         pack();
         setLocationRelativeTo(null);
@@ -352,6 +326,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPayFine;
     private javax.swing.JButton btnReturn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBorrowedBooks;

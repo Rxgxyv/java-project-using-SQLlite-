@@ -41,83 +41,63 @@ public class ChangePassword extends javax.swing.JFrame {
         txtConfirmPass = new javax.swing.JPasswordField();
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Change Password");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblChangePassHead.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblChangePassHead.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblChangePassHead.setText("Change Password");
+        getContentPane().add(lblChangePassHead, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 35, -1, -1));
 
+        lblCurrentPass.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblCurrentPass.setText("Current Password: ");
+        getContentPane().add(lblCurrentPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 181, -1, -1));
 
+        lblNewPass.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblNewPass.setText("New Password:");
+        getContentPane().add(lblNewPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 248, 203, -1));
 
+        lblConfirmPass.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblConfirmPass.setText("Confirm Password: ");
+        getContentPane().add(lblConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 318, 250, -1));
+        getContentPane().add(txtCurrPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 190, 150, -1));
 
+        txtNewPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNewPassActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNewPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 257, 150, -1));
+
+        txtConfirmPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtConfirmPassActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 327, 150, -1));
+
+        btnSave.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 434, -1, -1));
 
+        btnBack.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 47, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(btnBack)
-                        .addGap(106, 106, 106)
-                        .addComponent(lblChangePassHead))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblCurrentPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblNewPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
-                        .addGap(79, 79, 79)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtCurrPass)
-                            .addComponent(txtNewPass)
-                            .addComponent(txtConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(btnSave)))
-                .addContainerGap(135, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblChangePassHead)
-                    .addComponent(btnBack))
-                .addGap(74, 74, 74)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCurrentPass)
-                    .addComponent(txtCurrPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNewPass)
-                    .addComponent(txtNewPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmPass)
-                    .addComponent(txtConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addComponent(btnSave)
-                .addContainerGap(118, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\Downloads\\daria-nepriakhina-xY55bL5mZAM-unsplash.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 810));
 
         pack();
         setLocationRelativeTo(null);
@@ -145,6 +125,14 @@ public class ChangePassword extends javax.swing.JFrame {
             new LibrarianDashboard("").setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtNewPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNewPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNewPassActionPerformed
+
+    private void txtConfirmPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtConfirmPassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,6 +172,7 @@ public class ChangePassword extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblChangePassHead;
     private javax.swing.JLabel lblConfirmPass;
     private javax.swing.JLabel lblCurrentPass;

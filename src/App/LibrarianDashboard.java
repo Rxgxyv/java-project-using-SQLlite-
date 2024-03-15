@@ -48,14 +48,17 @@ public class LibrarianDashboard extends javax.swing.JFrame {
         btnViewBook = new javax.swing.JButton();
         btnEditBook = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         lblWelcome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        btnLogout.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +66,7 @@ public class LibrarianDashboard extends javax.swing.JFrame {
             }
         });
 
+        btnChangePass.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnChangePass.setText("Change Password");
         btnChangePass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +74,7 @@ public class LibrarianDashboard extends javax.swing.JFrame {
             }
         });
 
+        btnEditProfile.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnEditProfile.setText("Edit Profile");
         btnEditProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,109 +89,77 @@ public class LibrarianDashboard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnChangePass)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(btnEditProfile)
-                .addGap(18, 18, 18)
+                .addGap(74, 74, 74)
                 .addComponent(btnLogout)
-                .addGap(18, 18, 18))
+                .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(lblWelcome)
-                .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnEditProfile)
-                        .addComponent(btnChangePass))
-                    .addComponent(btnLogout))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(lblWelcome)
+                        .addGap(0, 14, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnLogout)
+                            .addComponent(btnEditProfile)
+                            .addComponent(btnChangePass))))
                 .addContainerGap())
         );
 
-        lblNoBooks.setText("No. of Books: ");
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 70, -1, -1));
 
+        lblNoBooks.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        lblNoBooks.setText("No. of Books: ");
+        getContentPane().add(lblNoBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 210, -1, -1));
+
+        lblNoUsers.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblNoUsers.setText("No. of Users: ");
+        getContentPane().add(lblNoUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 295, 174, -1));
 
         txtNoBooks.setEditable(false);
+        getContentPane().add(txtNoBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 219, 215, -1));
 
         txtNoUsers.setEditable(false);
+        getContentPane().add(txtNoUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 304, 215, -1));
 
+        btnViewBook.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnViewBook.setText("View Book Collection");
         btnViewBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewBookActionPerformed(evt);
             }
         });
+        getContentPane().add(btnViewBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 435, -1, -1));
 
+        btnEditBook.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnEditBook.setText("Edit Book Collection");
         btnEditBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditBookActionPerformed(evt);
             }
         });
+        getContentPane().add(btnEditBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 435, -1, -1));
 
+        jButton3.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jButton3.setText("View Transaction History");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(759, 435, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lblNoBooks, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblNoUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnViewBook))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNoBooks, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNoUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(btnEditBook)
-                                .addGap(39, 39, 39)
-                                .addComponent(jButton3)
-                                .addGap(8, 8, 8))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNoBooks)
-                    .addComponent(txtNoBooks, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNoUsers)
-                    .addComponent(txtNoUsers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(99, 99, 99)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnViewBook)
-                    .addComponent(btnEditBook)
-                    .addComponent(jButton3))
-                .addContainerGap(167, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\OneDrive\\Pictures\\res 8.jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 570));
 
         pack();
         setLocationRelativeTo(null);
@@ -265,6 +238,7 @@ public class LibrarianDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnViewBook;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblNoBooks;
     private javax.swing.JLabel lblNoUsers;

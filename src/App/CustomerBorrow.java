@@ -50,8 +50,10 @@ public class CustomerBorrow extends javax.swing.JFrame {
         btnBorrowBook = new javax.swing.JButton();
         lblBorrowedBk = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblBooks.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         tblBooks.setModel(new javax.swing.table.DefaultTableModel(
@@ -66,57 +68,32 @@ public class CustomerBorrow extends javax.swing.JFrame {
         tblBooks.setShowGrid(true);
         jScrollPane1.setViewportView(tblBooks);
 
-        btnBorrowBook.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 263, 469, 271));
+
+        btnBorrowBook.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnBorrowBook.setText("Borrow Book");
         btnBorrowBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrowBookActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBorrowBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 641, 199, -1));
 
-        lblBorrowedBk.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblBorrowedBk.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblBorrowedBk.setText("Available Books");
+        getContentPane().add(lblBorrowedBk, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 87, 453, -1));
 
+        btnBack.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 87, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(btnBack)
-                        .addGap(113, 113, 113)
-                        .addComponent(lblBorrowedBk, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(btnBorrowBook, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 92, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBorrowedBk)
-                    .addComponent(btnBack))
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(btnBorrowBook)
-                .addGap(42, 42, 42))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\Downloads\\janko-ferlic-sfL_QOnmy00-unsplash.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -186,6 +163,7 @@ public class CustomerBorrow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBorrowBook;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBorrowedBk;
     private javax.swing.JTable tblBooks;

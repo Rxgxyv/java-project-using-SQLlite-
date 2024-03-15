@@ -46,6 +46,7 @@ public class DisplayBook extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblBooks = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Book Collection");
@@ -54,16 +55,20 @@ public class DisplayBook extends javax.swing.JFrame {
                 formMouseClicked(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblList.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblList.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblList.setText("List of Books");
+        getContentPane().add(lblList, new org.netbeans.lib.awtextra.AbsoluteConstraints(478, 33, 355, -1));
 
+        btnBack.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 33, -1, -1));
 
         tblBooks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,32 +95,11 @@ public class DisplayBook extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tblBooks);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(btnBack)
-                .addGap(154, 154, 154)
-                .addComponent(lblList, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblList)
-                    .addComponent(btnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 183, 599, 367));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\OneDrive\\Pictures\\res 3.jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
         setLocationRelativeTo(null);
@@ -167,6 +151,7 @@ public class DisplayBook extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblList;
     private javax.swing.JTable tblBooks;

@@ -38,6 +38,7 @@ public class Fine extends javax.swing.JFrame {
     private void initComponents() {
 
         btngpModeofTransaction = new javax.swing.ButtonGroup();
+        jLabel2 = new javax.swing.JLabel();
         lblFine = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         rbtnDebit = new javax.swing.JRadioButton();
@@ -52,45 +53,82 @@ public class Fine extends javax.swing.JFrame {
         dtcExpiryDate = new com.toedter.calendar.JDateChooser();
         lblFineAmt = new javax.swing.JLabel();
         txtFineAmt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\Downloads\\brandi-redd-aJTiW00qqtI-unsplash.jpg")); // NOI18N
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Fine");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblFine.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblFine.setFont(new java.awt.Font("Verdana", 1, 48)); // NOI18N
         lblFine.setText("Pay Fine");
+        getContentPane().add(lblFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 38, -1, -1));
 
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel1.setText("Choose Mode of Transaction: ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 164, -1, -1));
 
         btngpModeofTransaction.add(rbtnDebit);
+        rbtnDebit.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         rbtnDebit.setText("Debit Card");
+        rbtnDebit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnDebitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rbtnDebit, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 162, 171, -1));
 
         btngpModeofTransaction.add(rbtnCredit);
+        rbtnCredit.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         rbtnCredit.setText("Credit Card");
+        rbtnCredit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnCreditActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rbtnCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 225, 171, -1));
 
+        lblCardNumber.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblCardNumber.setText("Card Number: ");
+        getContentPane().add(lblCardNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 266, 224, -1));
 
         txtCardNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCardNumberKeyTyped(evt);
             }
         });
+        getContentPane().add(txtCardNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 275, 202, -1));
 
+        lblCvv.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblCvv.setText("CVV:");
+        getContentPane().add(lblCvv, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 329, 175, -1));
 
+        txtCvv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCvvActionPerformed(evt);
+            }
+        });
         txtCvv.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCvvKeyTyped(evt);
             }
         });
+        getContentPane().add(txtCvv, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 338, 202, -1));
 
+        lblDateOfExpiry.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblDateOfExpiry.setText("Date of Expiry:");
+        getContentPane().add(lblDateOfExpiry, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 388, 224, -1));
 
+        btnPay.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         btnPay.setText("Pay");
         btnPay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPayActionPerformed(evt);
             }
         });
+        getContentPane().add(btnPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(931, 711, -1, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -98,80 +136,21 @@ public class Fine extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 71, -1, -1));
 
         dtcExpiryDate.setDateFormatString("dd/MM/yyyy");
+        getContentPane().add(dtcExpiryDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 396, 202, -1));
 
+        lblFineAmt.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lblFineAmt.setText("Fine Amount: ");
+        getContentPane().add(lblFineAmt, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 448, 175, -1));
 
         txtFineAmt.setEditable(false);
+        getContentPane().add(txtFineAmt, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 457, 71, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPay)
-                .addGap(276, 276, 276))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(btnBack)
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblFine)
-                        .addGap(269, 269, 269))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(lblFineAmt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblDateOfExpiry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblCvv, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblCardNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbtnCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rbtnDebit, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCardNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCvv, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dtcExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFineAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(77, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFine)
-                    .addComponent(btnBack))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(rbtnDebit))
-                .addGap(18, 18, 18)
-                .addComponent(rbtnCredit)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCardNumber)
-                    .addComponent(txtCardNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCvv)
-                    .addComponent(txtCvv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDateOfExpiry)
-                    .addComponent(dtcExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFineAmt)
-                    .addComponent(txtFineAmt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(btnPay)
-                .addGap(29, 29, 29))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\tgbrk\\OneDrive\\Pictures\\res 4.jpg")); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 790));
 
         pack();
         setLocationRelativeTo(null);
@@ -234,6 +213,18 @@ public class Fine extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_txtCvvKeyTyped
 
+    private void txtCvvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCvvActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCvvActionPerformed
+
+    private void rbtnCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnCreditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnCreditActionPerformed
+
+    private void rbtnDebitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnDebitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnDebitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -275,6 +266,8 @@ public class Fine extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btngpModeofTransaction;
     private com.toedter.calendar.JDateChooser dtcExpiryDate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblCardNumber;
     private javax.swing.JLabel lblCvv;
     private javax.swing.JLabel lblDateOfExpiry;
